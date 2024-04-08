@@ -1,0 +1,138 @@
+{
+  "manager": [
+    {
+      "id": "01",
+      "name": "Deenna",
+      "instagram": "url",
+      "img": {
+        "url": "https://ik.imagekit.io/euo36lugk/meraki/Deenna%20_OgHnnwcRVT.jpeg?updatedAt=1689997916307",
+        "alt": "stylist image"
+      }
+    },
+    {
+      "id": "23",
+      "name": "Sierra ",
+      "instagram": "url",
+      "img": {
+        "url": "https://ik.imagekit.io/euo36lugk/meraki/IMG-9831_b1vpltqbeu.jpg?updatedAt=1698156716314",
+        "alt": "Sierra  image"
+      }
+    }
+  ],
+  "assistants": [
+    {
+      "id": "03",
+      "name": "Caylah",
+      "instagram": "url",
+      "img": {
+        "url": "https://ik.imagekit.io/euo36lugk/meraki/Caylah%20_sQCvJQNE2.jpeg?updatedAt=1689997916302",
+        "alt": "stylist image"
+      }
+    }
+  ],
+  "frontDesk": [
+    {
+      "id": "021",
+      "name": "Beyonce ",
+      "instagram": "url",
+      "img": {
+        "url": "https://ik.imagekit.io/euo36lugk/meraki/IMG-9842_045UDkYHW.jpg?updatedAt=1698156715855",
+        "alt": "Beyonce  image"
+      }
+    },
+    {
+      "id": "022",
+      "name": "Vivian",
+      "instagram": "url",
+      "img": {
+        "url": "https://ik.imagekit.io/euo36lugk/meraki/IMG_7722_E7Bo3rIP_.jpg?updatedAt=1703350256634",
+        "alt": "Beyonce  image"
+      }
+    }
+  ],
+  "stylists": [
+    {
+      "id": "05",
+      "name": "Jacklene",
+      "instagram": "url",
+      "img": {
+        "url": "https://ik.imagekit.io/euo36lugk/meraki/Jocelyn_W5y68lWNq.jpeg?updatedAt=1689997916304",
+        "alt": "stylist image"
+      }
+    },
+    {
+      "id": "02",
+      "name": "Desi",
+      "instagram": "url",
+      "img": {
+        "url": "https://ik.imagekit.io/euo36lugk/meraki/IMG_4677_pXwB6EOHIp.jpg?updatedAt=1685178438728",
+        "alt": "stylist image"
+      }
+    },
+
+    {
+      "id": "10",
+      "name": "Riley ",
+      "instagram": "url",
+      "img": {
+        "url": "https://ik.imagekit.io/euo36lugk/meraki/Riley%20_ljAVYCUVL.jpeg?updatedAt=1689997915472",
+        "alt": "stylist image"
+      }
+    },
+    {
+      "id": "11",
+      "name": "Nallely",
+      "instagram": "url",
+      "img": {
+        "url": "https://ik.imagekit.io/euo36lugk/meraki/Nallely_HVi9ZIlTI.jpeg?updatedAt=1689997915479",
+        "alt": "stylist image"
+      }
+    },
+    {
+      "id": "13",
+      "name": "Lauren Ashley",
+      "instagram": "url",
+      "img": {
+        "url": "https://ik.imagekit.io/euo36lugk/meraki/Lauren%20Ashley_c3EMmxVNBP.jpeg?updatedAt=1689997916308",
+        "alt": "stylist image"
+      }
+    },
+    {
+      "id": "04",
+      "name": "Zac",
+      "instagram": "url",
+      "img": {
+        "url": "https://ik.imagekit.io/euo36lugk/meraki/Zac_gm4a1rqoH.jpeg?updatedAt=1689997916272",
+        "alt": "stylist image"
+      }
+    },
+    {
+      "id": "011",
+      "name": "Abbey",
+      "instagram": "url",
+      "img": {
+        "url": "https://ik.imagekit.io/euo36lugk/meraki/E39FC7AA-D298-42CC-A92A-08F9DE5AFFE7_iERBEF7py.jpg?updatedAt=1698156674288",
+        "alt": "stylist image"
+      }
+    },
+    {
+      "id": "05",
+      "name": "Elaa",
+      "instagram": "url",
+      "img": {
+        "url": "https://ik.imagekit.io/euo36lugk/meraki/IMG-3543__1__V0Hpqk_4e.JPG?updatedAt=1684219698592",
+        "alt": "stylist image"
+      }
+    },
+
+    {
+      "id": "08",
+      "name": "Cassandra",
+      "instagram": "url",
+      "img": {
+        "url": "https://ik.imagekit.io/euo36lugk/meraki/IMG_4659_O1C4NA43c.jpg?updatedAt=1685178439981",
+        "alt": "stylist image"
+      }
+    }
+  ]
+}

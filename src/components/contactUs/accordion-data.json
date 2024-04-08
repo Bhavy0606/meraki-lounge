@@ -1,0 +1,40 @@
+[
+  {
+    "title": "Education / Workshops ",
+    "content": "We are passionate about education and are dedicated to sharing our passion with you. Our team is currently working on creating a premiere education department; so you can have a personalized experience in learning The Meraki Way!"
+  },
+  {
+    "title": "Join our Team",
+    "content": "We are honored by your interest in joining our team! If you are interested in joining our team or renting a booth please send an email of interest with your resume to : Management@merakiloungesd.com "
+  },
+  {
+    "title": "Memberships",
+    "memberships": [
+      {
+        "title": "Standard Blow- Dry Membership",
+        "desc": "Receive two (2) blow-dry services a month and get 10% off Kerastase Fusio- Dose & K18 Treatments. (10% off treatments are only valid for use on the standard blow dry membership services)",
+        "price": "$110.50/month"
+      },
+      {
+        "title": "Premium Blow Dry Membership",
+        "desc": "Pamper yourself with four (4) blow-dry services a month and get 10% off retail products, Kerastase Fusio Dose & K18 Treatments (10% off treatments are only valid for use on the standard blow-dry membership services) Enjoy a free Fusio- Dose or K18 treatment the month of your birthday!",
+        "price": "$221.00/month"
+      },
+      {
+        "title": "Standard Blow Dry Membership (thick, long, curly or extensions) ",
+        "desc": "Receive two (2) blow dry services a month and get a 10% off Kerastase Fusio- Dose & K18 Treatments. (10% off treatments are only valid for use on the standard blow dry membership services.) ",
+        "price": "$145.00/month"
+      },
+      {
+        "title": "Premium Blow-Dry Membership (thick, long, curly or extensions)",
+        "desc": "Pamper yourself with four (4) blow-dry services a month and get 10% off Retail Products, Kerastase Fusio-Dose, & K18 Treatments (10% off treatments are only valid for use on the standard bow-dry membership services) Enjoy a free Fusio-Dose or K18 Treatment the month of your birthday ",
+        "price": "$290/month"
+      }
+    ],
+    "ending_lable": "To purchase Call us 619-535-7828 "
+  },
+  {
+    "title": "Collaboration Inquires",
+    "content": "Please Contact xyz.suport@mail.com with all marketing + PR inquiries."
+  }
+]

@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=Kumbh+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+* {
+  user-select: none;
+}
+*::selection {
+  background: none;
+}
+*::-moz-selection {
+  background: none;
+}
+body,
+button,
+p {
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Cinzel", "Times New Roman", Times, serif;
+}
+
+button {
+  cursor: pointer;
+}
+
+input {
+  outline: none;
+  border: none;
+}
+
+input:focus,
+textarea:focus {
+  transition: 200ms;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.63);
+}
+
+.active-link {
+  &:hover {
+    background-color: #b7b7b7 !important;
+  }
+}
+.floated-label {
+  top: -20px !important;
+  left: 7px !important;
+  font-size: 12px !important;
+}

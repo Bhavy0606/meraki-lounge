@@ -1,0 +1,86 @@
+.accordion {
+  border-top: 1px solid #ccc;
+  margin: 0px 15px;
+  // margin-top: px;
+
+  .accordion-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+
+    > h1 {
+      padding: 15px 0;
+      text-align: left;
+    }
+
+    .icon {
+      width: 30px;
+      height: 30px;
+      transition: transform 0.3s ease;
+
+      > img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .icon.open {
+      transform: rotate(45deg);
+    }
+  }
+
+  .show {
+    height: auto;
+    max-width: 40vh;
+  }
+
+  ul {
+    li {
+      text-align: justify;
+      font-size: 14px;
+      margin-bottom: 20px;
+      color: #77767f;
+      h3,
+      h4 {
+        color: #161616;
+      }
+      p {
+        color: #77767f;
+        margin-bottom: 10px;
+      }
+    }
+
+    label {
+      display: block;
+      margin: 30px 0 15px 0;
+      // color:blue
+    }
+  }
+
+  .slide {
+    clear: both;
+    width: 100%;
+    height: 0px;
+    overflow: hidden;
+    transition: height 0.4s ease;
+  }
+
+  .slide-show {
+    transition: height 0.4s ease;
+    overflow: hidden;
+    min-height: 100px;
+    max-height: fit-content;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .accordion {
+    .accordion-header {
+      > h1 {
+        font-size: 24px;
+      }
+    }
+  }
+}

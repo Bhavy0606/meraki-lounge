@@ -1,0 +1,352 @@
+.container {
+  padding: 100px 0;
+  display: flex;
+  justify-content: space-around;
+
+  > .left {
+    width: 45%;
+
+    > .get-connected-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      padding: 30px 0;
+
+      > h1 {
+        margin-bottom: 30px;
+        font-size: 42px;
+        font-weight: 500;
+      }
+
+      > .img-box {
+        width: 350px;
+        height: 440px;
+
+        > img {
+          border: 1px solid #161616;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+
+  > .right {
+    width: 45%;
+
+    .accordion-container {
+      padding: 30px 0;
+    }
+  }
+}
+
+.details-container {
+  .top,
+  .bottom {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .top {
+    .left,
+    .right {
+      a {
+        transition: 300ms;
+        color: #77767f;
+      }
+
+      &:hover {
+        a {
+          color: #161616;
+        }
+      }
+    }
+  }
+
+  .bottom {
+    .left,
+    .right {
+      a {
+        transition: 300ms;
+        color: #161616;
+      }
+
+      &:hover {
+        a {
+          color: #77767f;
+        }
+      }
+    }
+  }
+
+  .left,
+  .right {
+    width: 45%;
+    margin-right: 30px;
+    padding: 30px 15px 0px 15px;
+
+    a {
+      text-decoration: none;
+      cursor: pointer;
+      color: #77767f;
+
+      label {
+        cursor: pointer;
+        width: fit-content;
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
+}
+
+.newsletter-container {
+  > .newsletter {
+    padding: 60px 0;
+    background-color: #e2e2e2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    > h1 {
+      font-size: 52px;
+      text-align: center;
+      color: #161616;
+      margin-bottom: 15px;
+    }
+
+    > p {
+      text-align: center;
+      width: 1000px;
+      font-size: 16px;
+      color: #161616;
+      margin-bottom: 60px;
+    }
+
+    > .form-group {
+      width: 60%;
+      display: flex;
+      justify-content: space-around;
+
+      > .input-group {
+        width: 60%;
+        position: relative;
+
+        > label {
+          position: absolute;
+          font-size: 16px;
+          height: 20px;
+          display: flex;
+          align-items: center;
+          top: 8px;
+          left: 10px;
+          transition: 300ms;
+          cursor: text;
+        }
+
+        > input {
+          width: 100%;
+          border: 1px solid #77767f;
+          font-size: 16px;
+          padding: 8px 8px;
+          box-shadow: none;
+        }
+      }
+
+      > button {
+        width: 30%;
+        background-color: transparent;
+        outline: none;
+        border: 1px solid #161616;
+        padding: 4px 0px;
+        cursor: pointer;
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+        background-color: #161616;
+        color: #ffffff;
+        transition: 300ms;
+
+        &::after {
+          content: "";
+          position: absolute;
+          left: 50%;
+          top: 0;
+          z-index: -1;
+          height: 100%;
+          width: 0px;
+          background-color: #ffffff;
+          transition: 400ms all;
+        }
+
+        &:hover {
+          color: #161616;
+        }
+
+        &:hover::after {
+          left: 0;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .newsletter-container {
+    > .newsletter {
+      > h1 {
+        font-size: 42px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .newsletter-container {
+    > .newsletter {
+      > h1 {
+        font-size: 32px;
+      }
+
+      > p {
+        width: 800px;
+        font-size: 14px;
+        margin-bottom: 30px;
+      }
+
+      > .form-group {
+        > button {
+          width: 140px;
+          padding: 6px 12px;
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 968px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+
+    .left {
+      width: 100%;
+    }
+
+    .right {
+      width: 100%;
+    }
+  }
+
+  .details-container {
+    .top,
+    .bottom {
+      padding: 0 0 0 25px;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 60px 0;
+    display: flex;
+    justify-content: space-around;
+
+    > .left {
+      width: 100%;
+
+      > .get-connected-container {
+        padding: 30px 0;
+
+        > h1 {
+          font-size: 24px;
+          margin-bottom: 15px;
+        }
+
+        > .img-box {
+          width: 220px;
+          height: 310px;
+
+          > img {
+          }
+        }
+      }
+    }
+
+    > .right {
+      .accordion-container {
+        padding: 0 15px;
+        margin: 30px 0;
+      }
+    }
+  }
+
+  .details-container {
+    a {
+      font-size: 14px;
+    }
+  }
+
+  .newsletter-container {
+    > .newsletter {
+      padding: 30px 0;
+
+      > h1 {
+        font-size: 28px;
+      }
+
+      > p {
+        width: 600px;
+        font-size: 12px;
+      }
+
+      > .form-group {
+        > button {
+          width: 120px;
+          padding: 6px 12px;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 240px) and (max-width: 576px) {
+  .newsletter-container {
+    > .newsletter {
+      > p {
+        width: 90%;
+      }
+
+      > .form-group {
+        display: flex;
+        flex-direction: column;
+
+        .input-group {
+          width: 100%;
+          margin-bottom: 10px;
+        }
+
+        > button {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .details-container {
+    .top,
+    .bottom {
+      padding: 0 0 0 15px;
+    }
+
+    .right,
+    .left {
+      margin-right: 15px;
+    }
+  }
+}

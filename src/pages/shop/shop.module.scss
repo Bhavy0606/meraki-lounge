@@ -1,0 +1,11 @@
+.shop-container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #161616;
+
+    >h1 {
+        color: #ffffff
+    }
+}

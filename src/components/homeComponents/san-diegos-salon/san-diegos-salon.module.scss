@@ -1,0 +1,142 @@
+.container {
+  height: 400px;
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.45),
+      rgba(255, 255, 255, 0.45)
+    ),
+    url("https://ik.imagekit.io/euo36lugk/meraki/RevisionStudios-34_S4SPvDv3B.jpg?updatedAt=1692597526185");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: -100;
+
+  h1 {
+    font-size: 32px;
+    color: #161616;
+    font-weight: 700;
+    width: 700px;
+    text-align: center;
+  }
+
+  p {
+    text-align: center;
+    font-size: 16px;
+    color: #161616;
+    font-weight: 300;
+    margin-bottom: 30px;
+  }
+
+  button {
+    background-color: transparent;
+    outline: none;
+    border: 1px solid #161616;
+    width: 270px;
+    padding: 8px 0px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+
+    // >a {
+    text-decoration: none;
+    color: #161616;
+    display: block;
+    // }
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 0;
+      z-index: -1;
+      height: 100%;
+      width: 0px;
+      background-color: #161616;
+      transition: 400ms all;
+    }
+
+    &:hover {
+      // >a {
+      transition: 600ms;
+      transform: 100ms;
+      color: #ffffff;
+      // }
+    }
+
+    &:hover::after {
+      left: 0;
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .container {
+    height: 350px;
+
+    h1 {
+      font-size: 42px;
+      width: 700px;
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .container {
+    height: 350px;
+
+    h1 {
+      font-size: 32px;
+      width: 500px;
+    }
+
+    p {
+      font-size: 14px;
+      margin-bottom: 30px;
+    }
+
+    button {
+      font-size: 14px;
+      width: 180px;
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    height: 270px;
+
+    h1 {
+      font-size: 28px;
+      width: 420px;
+    }
+
+    p {
+      font-size: 12px;
+      margin-bottom: 30px;
+    }
+
+    button {
+      font-size: 12px;
+      width: 180px;
+    }
+  }
+}
+
+@media screen and (min-width: 240px) and (max-width: 576px) {
+  .container {
+    height: 270px;
+
+    h1 {
+      font-size: 18px;
+      // width: 90%;
+    }
+  }
+}

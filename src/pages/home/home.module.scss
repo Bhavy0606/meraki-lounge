@@ -1,0 +1,38 @@
+.animate {
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+.home-container {
+
+    >.video-container {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        transition: 800ms;
+        z-index: -1;
+
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #964B0060;
+        }
+
+        >video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+
+    >.home-content {
+
+        .empty-box {
+            height: 100vh;
+        }
+    }
+}

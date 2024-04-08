@@ -1,0 +1,212 @@
+.container {
+  display: flex;
+  height: 100vh;
+  background-color: #fff;
+
+  .model-right-container {
+    width: 50%;
+
+    .model-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .model-left-container {
+    width: 50%;
+  }
+
+  .meraki-luxury-saloon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h1,
+    label {
+      color: #161616;
+    }
+
+    label {
+      color: #a7a6ad;
+      padding: 0 15px;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 32px;
+      font-weight: 700;
+    }
+
+    label {
+      text-align: center;
+      font-size: 16px;
+      font-weight: 300;
+      margin-bottom: 30px;
+      display: block;
+    }
+
+    p {
+      text-align: justify;
+      margin-bottom: 30px;
+      width: 680px;
+    }
+
+    button {
+      background-color: transparent;
+      color: #161616;
+      outline: none;
+      border: 1px solid #161616;
+      width: 210px;
+      padding: 8px 0px;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: 0;
+        z-index: -1;
+        height: 100%;
+        width: 0px;
+        background-color: #161616;
+        transition: 400ms all;
+      }
+
+      &:hover {
+        transition: 600ms;
+        color: #ffffff;
+      }
+
+      &:hover::after {
+        left: 0;
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1480px) {
+  .container {
+    .meraki-luxury-saloon {
+      p {
+        width: 570px;
+      }
+
+      button {
+        font-style: 14px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .container {
+    .meraki-luxury-saloon {
+      h1 {
+        font-size: 28px;
+      }
+
+      label {
+        // width: 370px;
+        font-style: 14px;
+      }
+
+      p {
+        width: 370px;
+        font-style: 14px;
+      }
+
+      button {
+        font-style: 14px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column-reverse;
+    height: 100vh;
+    position: relative;
+
+    .model-right-container {
+      position: absolute;
+      width: 100%;
+      height: 100vh;
+      z-index: 1;
+    }
+
+    .model-left-container {
+      z-index: 2;
+      background-color: #000000a2;
+      position: absolute;
+      width: 100%;
+      height: 100vh;
+    }
+
+    .meraki-luxury-saloon {
+      h1,
+      label,
+      p {
+        color: #ffffff;
+      }
+
+      h1 {
+        font-size: 28px;
+      }
+
+      label {
+        font-size: 14px;
+        // width: 280px;
+        font-weight: 300;
+      }
+
+      p {
+        font-size: 12px;
+        width: 280px;
+        font-weight: 300;
+      }
+
+      button {
+        color: #ffffff;
+
+        border: 1px solid #ffffff;
+
+        font-style: 14px;
+
+        &::after {
+          content: "";
+          position: absolute;
+          left: 50%;
+          top: 0;
+          z-index: -1;
+          height: 100%;
+          width: 0px;
+          background-color: #ffffff;
+          transition: 400ms all;
+        }
+
+        &:hover {
+          transition: 600ms;
+          color: #161616;
+        }
+
+        &:hover::after {
+          left: 0;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+}
+
+@media screen and (max-width: 425px) {
+}
