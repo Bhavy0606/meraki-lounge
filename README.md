@@ -1,3 +1,4 @@
 # meraki-lounge
 
-this is my first reactjs project.
+Reactjs Project 
+A landing page for a hair salon with a nude look
