@@ -4,6 +4,7 @@ function getRandomFloat(min: number, max: number) {
   return Math.random() * (max - min) + min;
 }
 const GetInTouch = () => {
+  const BOOKING_URL = `https://www.vagaro.com/lawameraki/book-now`;
   const headingVariants: Variants = {
     headingOffScreen: {
       opacity: 0,
@@ -68,7 +69,7 @@ const GetInTouch = () => {
             {/* <input type="email" placeholder="Email Address" /> */}
             <button
               onClick={() => {
-                window.location.href = "/contact";
+                window.open(BOOKING_URL, "_blank");
               }}
             >
               Book

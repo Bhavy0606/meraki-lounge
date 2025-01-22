@@ -5,6 +5,7 @@ function getRandomFloat(min: number, max: number) {
   return Math.random() * (max - min) + min;
 }
 const UrbanLuxury = (props: { url: string }) => {
+  //   const BOOKING_URL = `https://www.vagaro.com/lawameraki/book-now`;
   const navigate = useNavigate();
   const headingVariants: Variants = {
     headingOffScreen: {
@@ -40,6 +41,7 @@ const UrbanLuxury = (props: { url: string }) => {
       },
     },
   };
+
   return (
     <div className={`${styles["container"]}`}>
       <div className={`${styles["model-left-container"]}`}>
@@ -66,7 +68,9 @@ const UrbanLuxury = (props: { url: string }) => {
           variants={fadeInVariants}
         >
           <p>Welcome to the Meraki Lounge.</p>
+
         </motion.div>
+
         <motion.div
           initial="fadeInOffScreen"
           whileInView="fadeInOnScreen"

@@ -30,11 +30,21 @@ const Header = () => {
     <>
       <div className={`${styles["container"]}`}>
         {/* <div className={`${isScrolled ? styles["logo-container-scrolled"] : styles["logo-container"]}`}> */}
-        <div className={`${styles["logo-container-scrolled"]}`}>
+        <div
+          className={`${
+            isScrolled
+              ? styles["logo-container-scrolled"]
+              : styles["logo-container-scrolled"]
+          }`}
+        >
           <img
             draggable={false}
             src={
-              "https://ik.imagekit.io/euo36lugk/meraki/merakilogo1_1_iqs--eyeW.png?updatedAt=1685192727141"
+              document.documentElement.clientWidth > 768
+                ? isScrolled
+                  ? "https://ik.imagekit.io/euo36lugk/meraki/merakilogo1_1_iqs--eyeW.png?updatedAt=1685192727141"
+                  : "https://ik.imagekit.io/euo36lugk/meraki/merakilogo1_1_iqs--eyeW.png?updatedAt=1685192727141"
+                : "https://ik.imagekit.io/euo36lugk/meraki/merakilogo1_1_iqs--eyeW.png?updatedAt=1685192727141"
             }
             alt="meraki-logo"
             onClick={() => {

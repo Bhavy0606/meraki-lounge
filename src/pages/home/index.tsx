@@ -6,6 +6,7 @@ import PremiereSalon from "../../components/homeComponents/premiere-salon";
 import SanDiegosSalon from "../../components/homeComponents/san-diegos-salon/san-diegos-salon";
 import UrbanLuxury from "../../components/homeComponents/urban-luxury";
 import styles from "./home.module.scss";
+import GoogleReviews from "../../components/homeComponents/google-reviews";
 function getRandomFloat(min: number, max: number) {
   return Math.random() * (max - min) + min;
 }
@@ -93,6 +94,13 @@ function Home() {
             variants={imageVariants}
           >
             <NewsLetter />
+          </motion.div>
+          <motion.div
+            initial="imageOffScreen"
+            whileInView="imageOnScreen"
+            variants={imageVariants}
+          >
+            <GoogleReviews />
           </motion.div>
           {/* <motion.div initial="imageOffScreen" whileInView="imageOnScreen" variants={imageVariants}>
                         <GetInTouch />

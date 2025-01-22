@@ -22,13 +22,13 @@ const StoreDetails = () => {
         <div className={styles["left"]}>
           <a href="mailto:info@merakiloungesd.com">
             <label>EMAIL:</label>
-            <label>xyz@mail.com</label>
+            <label>lawameraki@gmail.com</label>
           </a>
         </div>
         <div className={styles["right"]}>
-          <a href="tel:+1 (123) 321-7898">
+          <a href="tel:+1 (619) 535-7828">
             <label>TO BOOK AN APPOINTMENT </label>
-            <label>+1 (123) 321-7898</label>
+            <label>+1 (619) 535-7828</label>
           </a>
         </div>
       </div>

@@ -41,12 +41,12 @@
       }
     },
     {
-      "id": "022",
-      "name": "Vivian",
+      "id": "021",
+      "name": "Nikki Branson",
       "instagram": "url",
       "img": {
-        "url": "https://ik.imagekit.io/euo36lugk/meraki/IMG_7722_E7Bo3rIP_.jpg?updatedAt=1703350256634",
-        "alt": "Beyonce  image"
+        "url": "https://ik.imagekit.io/euo36lugk/meraki/IMG_5578__iKRNeQ83.jpeg?updatedAt=1729617147524",
+        "alt": "Nikki Branson  image"
       }
     }
   ],
@@ -60,7 +60,7 @@
         "alt": "stylist image"
       }
     },
-    {
+     {
       "id": "02",
       "name": "Desi",
       "instagram": "url",
@@ -69,7 +69,6 @@
         "alt": "stylist image"
       }
     },
-
     {
       "id": "10",
       "name": "Riley ",
@@ -88,24 +87,7 @@
         "alt": "stylist image"
       }
     },
-    {
-      "id": "13",
-      "name": "Lauren Ashley",
-      "instagram": "url",
-      "img": {
-        "url": "https://ik.imagekit.io/euo36lugk/meraki/Lauren%20Ashley_c3EMmxVNBP.jpeg?updatedAt=1689997916308",
-        "alt": "stylist image"
-      }
-    },
-    {
-      "id": "04",
-      "name": "Zac",
-      "instagram": "url",
-      "img": {
-        "url": "https://ik.imagekit.io/euo36lugk/meraki/Zac_gm4a1rqoH.jpeg?updatedAt=1689997916272",
-        "alt": "stylist image"
-      }
-    },
+   
     {
       "id": "011",
       "name": "Abbey",
@@ -124,7 +106,6 @@
         "alt": "stylist image"
       }
     },
-
     {
       "id": "08",
       "name": "Cassandra",
@@ -133,6 +114,43 @@
         "url": "https://ik.imagekit.io/euo36lugk/meraki/IMG_4659_O1C4NA43c.jpg?updatedAt=1685178439981",
         "alt": "stylist image"
       }
+    },
+    {
+      "id": "041",
+      "name": "Kam Thurmond ",
+      "instagram": "url",
+      "img": {
+        "url": "https://ik.imagekit.io/euo36lugk/meraki/Tezza-2018_njtPDACYI0.jpeg?updatedAt=1729617148899",
+        "alt": "stylist image"
+      }
+    },
+    {
+      "id": "042",
+      "name": "Michelle Reynolds",
+      "instagram": "url",
+      "img": {
+        "url": "https://ik.imagekit.io/euo36lugk/meraki/IMG_5574_XVN4jGal2R.jpeg?updatedAt=1729617147684",
+        "alt": "stylist image"
+      }
+    },
+    {
+      "id": "043",
+      "name": "Siara Miller",
+      "instagram": "url",
+      "img": {
+        "url": "https://ik.imagekit.io/euo36lugk/meraki/IMG_5564_TuIO04OXc.jpeg?updatedAt=1729617148854",
+        "alt": "stylist image"
+      }
+    },
+    {
+      "id": "044",
+      "name": "Martinique Cabrera",
+      "instagram": "url",
+      "img": {
+        "url": "https://ik.imagekit.io/euo36lugk/meraki/IMG_9398_oapcMfNS3.jpeg?updatedAt=1729617149177",
+        "alt": "stylist image"
+      }
     }
+  
   ]
 }

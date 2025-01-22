@@ -25,12 +25,20 @@ const Footer = () => {
                 Contact
               </label>
               <label>
-                <a href="#" rel="noreferrer" target="_blank">
+                <a
+                  href="https://instagram.com/merakiloungesd?igshid=MzRlODBiNWFlZA=="
+                  rel="noreferrer"
+                  target="_blank"
+                >
                   Visit Us On Instagram
                 </a>
               </label>
               <label>
-                <a href="#" rel="noreferrer" target="_blank">
+                <a
+                  href="https://www.facebook.com/LawaMerakiSalon/"
+                  rel="noreferrer"
+                  target="_blank"
+                >
                   Visit Us On Facebook
                 </a>
               </label>
@@ -51,6 +59,9 @@ const Footer = () => {
               >
                 Shop Extensions
               </label>
+              {/* <label>
+                <a href="tel:+1 (619) 535-7828">+1 (619) 535-7828</a>
+              </label> */}
             </div>
             <div className={styles["footer-right-item"]}>
               <h5>Quick Links</h5>
@@ -78,7 +89,7 @@ const Footer = () => {
               </label>
               <h5>Phone:</h5>
               <label>
-                <a href="tel:+1 (123) 321-7898">+1 (123) 321-7898</a>
+                <a href="tel:+1 (619) 535-7828">+1 (619) 535-7828</a>
               </label>
             </div>
           </div>

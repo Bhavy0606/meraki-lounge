@@ -1,6 +1,11 @@
-async function newSubscription(email: string) {
-  const formData = new FormData();
-  const currentTime = new Date();
+async function newSubscription(formD: {
+  firstname: string
+  lastname: string
+  phone: number | string
+  email: string
+}) {
+  const formData = new FormData()
+  const currentTime = new Date()
   const options = {
     weekday: "long" as const,
     year: "numeric" as const,
@@ -10,42 +15,27 @@ async function newSubscription(email: string) {
     minute: "numeric" as const,
     second: "numeric" as const,
     timeZoneName: "short" as const,
-  };
+  }
 
-  const formatter = new Intl.DateTimeFormat("en-US", options);
-  const formattedTime = formatter.format(currentTime);
+  const formatter = new Intl.DateTimeFormat("en-US", options)
+  const formattedTime = formatter.format(currentTime)
 
-  formData.append("Email", email);
-  formData.append("Time", JSON.stringify(formattedTime));
+  formData.append("Email", formD.email)
+  formData.append("firstname", formD.firstname)
+  formData.append("lastname", formD.lastname)
+  formData.append("phone", formD.phone.toString())
+  formData.append("Time", JSON.stringify(formattedTime))
 
-  // const resp = await fetch(
-  //   "https://script.google.com/macros/s/AKfycbwsiZ-EkkIgOrytKymH9l2a5hmkQTB3cXMLu3gK-h0OVYJmRHPfaTkFIjOpBLYNNP90/exec",
-  //   { method: "POST", body: formData }
-  // );
-  // if (resp.status === 200 || resp.status === 201) {
-  //   console.log(resp);
-  //   message= "Subscribed";
-  // } else {
-  //   return "Something went wrong!";
-  // }
-  let message = "";
-  await fetch(
-    "https://script.google.com/macros/s/AKfycbw9alKKDojlt2mLfoIqpouteC_Ik39dRu5I2HWazM169YqpRuIiMvq36MwV1uqCUgiG/exec",
-    {
-      method: "POST",
-      body: formData,
-    }
+  const resp = await fetch(
+    "https://script.google.com/macros/s/AKfycbzf0kUtt4J7s_9_qfh8A-WQBW6mgel0qGp08Yu6B7_STRc0lzh8hD2cYeCqHZwiEyB7/exec",
+    { method: "POST", body: formData }
+    // "https://script.google.com/macros/s/AKfycbzB9BTbZnoSV52Yu_pxYzESRiXX6jMLX9BjtBy-Qnx8HTEUAkmjUYpwzGew9q3b9E0g/exec",
+    // { method: "POST", body: formData }
   )
-    .then((response) => response.text())
-    .then((data) => {
-      if (data === "Subscribed") {
-        message = "Subscribed";
-      }
-      if (data === "Exists") {
-        message = "Subscription failed: Email already exists.";
-      }
-    });
-
-  return message;
+  if (resp.status === 200 || resp.status === 201) {
+    return "Subscribed"
+  } else {
+    return "Something went wrong!"
+  }
 }
-export default newSubscription;
+export default newSubscription

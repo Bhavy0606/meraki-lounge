@@ -15,6 +15,7 @@ const Services = () => {
   const [activeTab, setActiveTab] = useState<string>("extensions");
   const [serviceList, setServiceList] = useState<IServiceDataModel[]>([]);
   const [servicesCards, setServicesCards] = useState<any>();
+  const BOOKING_URL = `https://www.vagaro.com/lawameraki/book-now`;
 
   useEffect(() => {
     const data: any = servicesData[activeTab];
@@ -134,7 +135,7 @@ const Services = () => {
           >
             <button
               onClick={() => {
-                window.location.href = "/contact";
+                window.open(BOOKING_URL, "_blank");
               }}
             >
               Book

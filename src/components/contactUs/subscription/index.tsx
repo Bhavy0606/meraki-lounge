@@ -3,57 +3,82 @@ import Snackbar from "@mui/material/Snackbar";
 import { useEffect, useState } from "react";
 import newSubscription from "../../../shared/services/subscription";
 import styles from "../contact-us.module.scss";
-const Subscription = () => {
-  const [filledInput, setFilledInput] = useState<boolean>(false);
-  const [open, setOpen] = useState<boolean>(false);
-  const [email, setEmail] = useState<string>("");
-  const [subscribing, setSubscribing] = useState<boolean>(false);
-  const [snackbarMessage, setSnackbarMessage] = useState<string>("");
-  const updateEmail = (e: string) => {
-    setEmail(e);
-  };
 
-  const handleFocus = () => {
-    setFilledInput(true);
+interface IFormData {
+  firstname: string,
+  lastname: string,
+  phone: number | string,
+  email: string
+
+}
+
+
+const Subscription = () => {
+
+  const initFormData: IFormData = {
+    firstname: "",
+    lastname: "",
+    phone: "",
+    email: ""
+  }
+
+  const [formData, setFormData] = useState<IFormData>(initFormData)
+
+
+  const [open, setOpen] = useState(false);
+  const [subStatus, setSubStatus] = useState("");
+  const [isDisabled, setIsDisabled] = useState(true);
+  const [initialLoad, setInitialLoad] = useState(true);
+
+
+
+
+  useEffect(() => {
+    if (!initialLoad) {
+      (formData.email.length === 0) ? handleClose() :
+        validateEmail(formData.email).then((isValid) => {
+          if (!isValid) {
+            setSubStatus("Invalid Email");
+            setOpen(!isValid);
+            setIsDisabled(true);
+          } else {
+            handleClose();
+            setIsDisabled(false);
+          }
+        });
+    } else {
+      setInitialLoad(false);
+    }
+  }, [formData.email, initialLoad]);
+
+  const handleSubscribe = async (event: React.MouseEvent<HTMLButtonElement>) => {
+    event.preventDefault();
+
+    const isValid = await validateEmail(formData.email);
+
+    if (!isValid) {
+      setSubStatus("Invalid Email");
+      setIsDisabled(true);
+    } else {
+      setIsDisabled(false);
+      const status = await newSubscription(formData);
+      setSubStatus(status);
+    }
+
+    setOpen(true);
+  };
+  const handleClose = () => {
+    setSubStatus("");
     setOpen(false);
   };
 
-  const handleBlur = async () => {
-    setFilledInput(email.length > 0);
-  };
-
+  // Email Validation
   const validateEmail = async (search: string) => {
     const regexp =
-      /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|("([^\\"]|\\")*"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z0-9-]+.)+[a-zA-Z]{2,}))$/; // eslint-disable-line
+      /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|("([^\\"]|\\")*"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z0-9-]+.)+[a-zA-Z]{2,}))$/  // eslint-disable-line
 
     return regexp.test(search);
   };
-
-  const handleSubscribe = async (
-    event: React.MouseEvent<HTMLButtonElement>
-  ) => {
-    event.preventDefault();
-    setSubscribing(true);
-    const isValid = await validateEmail(email);
-    setOpen(!isValid);
-    if (!isValid) {
-      setSnackbarMessage("Invalid Email");
-    } else {
-      const status = await newSubscription(email);
-
-      setSnackbarMessage(status);
-      setOpen(true);
-    }
-
-    setEmail("");
-  };
-  const handleClose = () => {
-    setSnackbarMessage("");
-    setOpen(false);
-  };
-  useEffect(() => {
-    setSubscribing(false);
-  }, [snackbarMessage]);
 
   return (
     <>
@@ -65,13 +90,91 @@ const Subscription = () => {
             discounts, a peak into salon news, hairstyle tips, product
             spotlights, trend forecasting, and more.
           </p>
-          <div className={styles["form-group"]}>
+          <div className={styles["form-container"]}>
+            <div className={styles["two-form-group"]}>
+              <div className={styles["form-group"]}>
+                <input
+                  type="text"
+                  required
+                  id="firstname"
+                  onChange={(event) => {
+                    setFormData({ ...formData, firstname: event.target.value })
+                  }}
+                />
+                <label
+                  htmlFor="firstname"
+                  className={"floated-label"}
+                >
+                  First Name
+                </label>
+              </div>
+              <div className={styles["form-group"]}>
+                <input
+                  type="text"
+                  required
+                  id="lastname"
+                  onChange={(event) => {
+                    setFormData({ ...formData, lastname: event.target.value })
+                  }}
+
+                />
+                <label
+                  htmlFor="lastname"
+                  className={"floated-label"}
+                >
+                  Last Name
+                </label>
+              </div>
+            </div>
+            <div className={styles["form-group"]}>
+              <input
+                type="text"
+
+                required
+                id="phone"
+                onChange={(event) => {
+                  setFormData({ ...formData, phone: event.target.value })
+                }}
+
+              />
+              <label
+                htmlFor="phone"
+                className={"floated-label"}
+              >
+                Phone
+              </label>
+            </div>
+
+            <div className={styles["form-group"]}>
+              <input
+                type="email"
+
+                required
+                id="email"
+                onChange={(event) => {
+                  setFormData({ ...formData, email: event.target.value })
+                }}
+              />
+              <label
+                htmlFor="email"
+                className={"floated-label"}
+              >
+                Email
+              </label>
+            </div>
+            <button
+              disabled={isDisabled}
+              onClick={handleSubscribe}
+            >
+              Subscribe
+            </button>
+          </div>
+          {/* <div className={styles["form-group"]}>
             <div className={styles["input-group"]}>
               <input
                 type="email"
                 required
                 id="input-id"
-                value={email}
                 onChange={(e) => {
                   updateEmail(e.target.value);
                 }}
@@ -86,31 +189,30 @@ const Subscription = () => {
                 Email
               </label>
             </div>
-            <button disabled={subscribing} onClick={handleSubscribe}>
-              {subscribing ? "Subscribing..." : "Subscribe"}
-            </button>
-          </div>
-
-          {open && (
-            <Snackbar
-              open={open}
-              autoHideDuration={6000}
-              onClose={handleClose}
-              message={snackbarMessage}
+            <button
+              disabled={isDisabled}
+              onClick={handleSubscribe}
             >
-              <Alert
-                severity={
-                  snackbarMessage === "Subscribed" ? "success" : "error"
-                }
-                sx={{ width: "100%" }}
+              Subscribe
+            </button>
+          </div> */}
+          {
+            !initialLoad && (
+              <Snackbar
+                open={open}
+                autoHideDuration={6000}
+                onClose={handleClose}
+                message={subStatus}
               >
-                {snackbarMessage}
-              </Alert>
-            </Snackbar>
-          )}
+                <Alert severity="success" sx={{ width: "100%" }}>
+                  {subStatus}
+                </Alert>
+              </Snackbar>
+            )
+          }
         </div>
       </div>
-      ;
+
     </>
   );
 };

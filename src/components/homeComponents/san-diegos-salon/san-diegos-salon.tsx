@@ -1,6 +1,6 @@
+import { Variants, motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import styles from "./san-diegos-salon.module.scss";
-import { Variants, motion } from "framer-motion";
 function getRandomFloat(min: number, max: number) {
   return Math.random() * (max - min) + min;
 }
@@ -39,6 +39,7 @@ const SanDiegosSalon = () => {
       },
     },
   };
+
   const navigate = useNavigate();
   return (
     <div className={styles["container"]}>
@@ -50,6 +51,7 @@ const SanDiegosSalon = () => {
         <h1>San Diego's Premiere Salon</h1>
 
         <p>Choose from our various specialty services</p>
+
       </motion.div>
       <motion.div
         initial="fadeInOffScreen"

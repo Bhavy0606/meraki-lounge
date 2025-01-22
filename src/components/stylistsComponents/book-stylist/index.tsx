@@ -73,7 +73,12 @@ const BookStylist = () => {
           whileInView="fadeInOnScreen"
           variants={fadeInVariants}
         >
-          <a href="#">Follow us on Instagram</a>
+          <a
+            href="https://instagram.com/merakiloungesd?igshid=MzRlODBiNWFlZA=="
+            target="blank"
+          >
+            Follow us on Instagram
+          </a>
         </motion.div>
       </div>
       <div className={styles["right"]}>
