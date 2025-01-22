@@ -17,7 +17,7 @@ A modern and responsive web application designed for a hair lounge/salon, showca
 
 ## Live Demo
 
-Explore the live application: [Meraki Lounge Web App](https://meraki-lounge-react-app.netlify.app/contact)
+Explore the live application: [Meraki Lounge Web App](https://meraki-lounge-react-app.netlify.app/)
 
 ## Installation and Setup
 
